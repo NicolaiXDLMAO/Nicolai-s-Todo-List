@@ -195,6 +195,7 @@ input[type="checkbox"]::before::after
 .scroll::-webkit-scrollbar
 {
     width: 0.6rem;
+    scrollbar-width: thin;
 }
 
 .scroll::-webkit-scrollbar-thumb

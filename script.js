@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function()
 
 function addTask()
 {
-    const newTask = todoInput.value.trim();
+    const newTask = todoInput.value.trim(); //trim removes excess spaces
     if(newTask !== "")
     {
         todo.push(
@@ -45,7 +45,7 @@ function addTask()
 function deleteAllTask()
 {
     todo = [];
-    saveToLocalStorage;
+    saveToLocalStorage();
     displayTasks();
 }
 
@@ -104,6 +104,7 @@ function editTask(index)
         }
         displayTasks();
     };
+
 }
 
 function toggleTask(index)

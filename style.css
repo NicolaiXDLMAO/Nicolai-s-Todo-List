@@ -31,7 +31,6 @@ body
 .btn
 {
     background: var(--highlight);
-    border-radius: 8px;
     color: var(--light);
     font-size: 1.1rem;
     padding: 0.7rem 1.5rem;
@@ -83,6 +82,7 @@ h2
     padding: 1rem;
     font-size: 1rem;
     outline: none;
+    padding-right: 5.5rem;
 }
 
 input[type="text"]::placeholder
@@ -97,6 +97,15 @@ input[type="text"]::placeholder
 {
     display: flex;
     gap: 0.5rem;
+}
+
+.edit-input
+{
+    display: flex;
+    gap: 0.5rem;
+    outline: none;
+    border: solid var(--pink);
+    border-radius: 0.3rem;
 }
 
 .main-list

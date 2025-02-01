@@ -90,11 +90,25 @@ function editTask(index)
     const inputElement = document.createElement("input");
 
     inputElement.value = existingText;
+    inputElement.classList.add("edit-input"); // Add CSS class for styling
     todoItem.replaceWith(inputElement);
 
     inputElement.focus();
 
-    inputElement.addEventListener("blur"), function () 
+    inputElement.addEventListener("blur", function () 
+    {
+        submitEdit();
+    });
+
+    inputElement.addEventListener("keydown", function(event)
+    {
+        if(event.key === "Enter")
+        {
+            submitEdit();
+        }
+    });
+
+    function submitEdit()
     {
         const updatedText = inputElement.value.trim();
         if(updatedText)
@@ -103,8 +117,7 @@ function editTask(index)
             saveToLocalStorage();
         }
         displayTasks();
-    };
-
+    }
 }
 
 function toggleTask(index)
